@@ -62,7 +62,7 @@ class Cat {
 
   huntMice() {
     if (Math.random() + this.#successChance >= 0.5) {
-      return this.#miceCaught++;
+      return ++this.#miceCaught;
     } else {
       console.log(`${this.#nickname} failed to catch a mouse. Try again`);
     }
@@ -89,6 +89,7 @@ class StrayCat extends Cat {
       );
     }
     this.#miceEaten++;
+    return this.#miceEaten;
   }
 }
 
